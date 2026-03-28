@@ -1,11 +1,16 @@
-# mew-project（サンプル集）
-
-Sigfox・LINE（LIFF）・AWS を組み合わせた車両トラッキング構想のうち、**フロントエンド（Create React App）** 周りのコードをまとめたディレクトリです。  
-API Gateway や Lambda の実装本体は含まれず、**LIFF アプリと Amplify（Cognito）ログイン**の参考用です。
+# SigfoxとLIFF(LINE)を利用した車両トラッキングデバイス構想(mew-project)
+LINE Developers Communityで発表したプロダクトです。
+https://linedevelopercommunity.connpass.com/event/275767/
 
 ## 詳細Qiita記事
 詳細な背景はこちらを参照してください。
 https://qiita.com/taiyyytai/items/c006b35cd2e23973c76c
+
+### 概要
+![overview](overview.png)
+
+### アーキテクチャ
+![overview_architecture](overview_architecture.png)
 
 ## 含まれるプロジェクト
 
