@@ -16,21 +16,10 @@ https://qiita.com/taiyyytai/items/c006b35cd2e23973c76c
 | `liff-line-link-cognito-web` | LIFF + トークン検証 API + **Cognito 設定を環境変数で注入**する版。 |
 | `liff-gps-map-web` | LIFF + バックエンドから GPS 履歴取得 + **Google Maps** 表示。 |
 
-## Git
-
-このディレクトリは **ルート1本の Git リポジトリ**として管理します（各サブプロジェクトに別 `.git` は置きません）。  
-新規公開用に履歴を切り直した場合は、ルートで `git init` して初回コミットから始めてください。
-
 ## 推奨環境
 
 - **Node.js 20.x**（ルートの `.nvmrc` 参照）
 - パッケージマネージャはプロジェクトごとに **npm または yarn** が混在しています。各 README に従ってください。
-
-## 公開・セキュリティ
-
-- **`.env` / `aws-exports.js`（実値）はコミットしないでください。** 各フォルダの `.env.example` と `aws-exports.example.js` を参照してください。
-- 過去にリポジトリへシークレットを載せた場合は、**新規リポジトリに履歴なしで push** する前後に **キーのローテ** を推奨します。
-- 脆弱性の連絡先は `SECURITY.md` を参照してください。
 
 ## ライセンス
 
