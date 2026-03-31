@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import liff from "@line/liff";
 import "./App.css";
+import { parseLambdaBody } from "./lib/api";
 
 function App() {
   const navigate = useNavigate();
@@ -22,7 +23,8 @@ function App() {
       })
         .then((response) => response.json())
         .then((data) => {
-          const data_linkToken = data.body.linkToken;
+          const parsed = parseLambdaBody(data);
+          const data_linkToken = parsed?.linkToken ?? parsed?.body?.linkToken;
           liff.ready.then(() => {
             setTimeout(() => {
               navigate("/login", { state: { data: data_linkToken } });

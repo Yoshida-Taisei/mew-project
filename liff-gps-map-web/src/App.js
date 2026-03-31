@@ -3,6 +3,7 @@ import liff from "@line/liff";
 import "./App.css";
 import { GoogleMap, LoadScript, MarkerF } from "@react-google-maps/api";
 import { ClipLoader } from "react-spinners";
+import { parseLambdaBody } from "./lib/api";
 
 const EMPTY_MARKER = { lat: null, lng: null };
 
@@ -49,7 +50,8 @@ function App() {
         })
           .then((response) => response.json())
           .then((res) => {
-            const data_res = JSON.parse(res.body);
+            const parsed = parseLambdaBody(res);
+            const data_res = typeof parsed === "string" ? JSON.parse(parsed) : parsed;
 
             try {
               const row = data_res.Data[0];
